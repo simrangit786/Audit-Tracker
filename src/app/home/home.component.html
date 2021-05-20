@@ -1,0 +1,12 @@
+<button routerLink = '/product'>Add projects</button><br>
+
+<h1>Projects</h1>
+
+<table>
+    <th>Id</th>
+    <th>Projectname</th>
+    <tr *ngFor = "let product of  products">
+        <td>{{product.id}}</td>
+        <td>{{product.projectname}}</td>
+    </tr>
+</table>

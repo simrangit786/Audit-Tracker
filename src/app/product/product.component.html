@@ -1,0 +1,8 @@
+<a routerLink = "/">back</a>
+
+<h1>Add new product</h1>
+
+<form id="formNewProduct" name="formNewProduct" #productData = "ngForm" (ngSubmit) = "addNewProduct(productData.value)">
+    <label>projectName:</label><input type="text" name="name" id="name" placeholder="name">
+    <input type="submit" value="AddProduct">
+</form>
