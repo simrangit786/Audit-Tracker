@@ -7,32 +7,40 @@ import { DataService } from '../data.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-
-  product = {
-    projectname :" ",
-    availaible:false
-  };
+  Data = {
+    projectname:" ",
+    published:false
+  }
   submitted = false;
 
-
-  constructor(private dataService:DataService) { }
+  
+  constructor(private dataservice:DataService) { }
 
   ngOnInit(): void {
   }
-   
-  addNewProduct() : void {
+
+  saveData():void{
     const data = {
-      name: this.product.projectname
+      projectname:this.Data.projectname
 
     };
-    this.dataService.addNewProduct(data).subscribe(response => {
-      console.log(response)
-      this.submitted = true;
+
+    this.dataservice.create(data).subscribe(response =>{
+      console.log(response);
+      this.submitted=true;
     },
     error => {
       console.log(error);
     });
+    
+  }
 
+  newdata():void{
+    this.submitted=false;
+    this. Data = {
+      projectname:"",
+      published:false
+    }
   }
   
   }

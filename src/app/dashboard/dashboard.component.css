@@ -1,10 +1,20 @@
 .date-app {
-  margin-left: 30px;
+  margin-left: 60px;
+  color: white;
 }
 .datepick-app {
   margin-left: 800px;
+  color: aliceblue;
 }
 .grid-app {
-  border: 2px solid black;
-  background-color: burlywood;
+  background-color: grey;
+}
+
+.edit-app {
+  font-size: 50px;
+  color: aliceblue;
+}
+.style-app {
+  background-color: brown;
+  height: 100px;
 }

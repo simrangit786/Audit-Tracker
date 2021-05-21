@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {HttpClient , HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 
@@ -24,29 +24,16 @@ export class DataService {
   }
 
 
-  addNewProduct(data): Observable<any> {
+  create(data): Observable<any> {
     return this.httpclient.post(this.APISERVER, data);
   }
-/*
-  addNewProduct(Create):Observable<Create> {
-    return this.httpclient.post<Create>(this.APISERVER + '/products/', JSON.stringify(Create), this.httpOptions)
-    .pipe(
-      catchError(this.errorHandler)
-    )
-  }  
 
-  errorHandler(error) {
-    let errorMessage = '';
-    if(error.error instanceof ErrorEvent) {
-      // Get client-side error
-      errorMessage = error.error.message;
-    } else {
-      // Get server-side error
-      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
-    }
-    console.log(errorMessage);
-    return throwError(errorMessage);
- }
-}
-*/
+  delete(id): Observable<any> {
+    return this.httpclient.delete(`${this.APISERVER}/${id}`);
+  }
+
+  deleteAll(): Observable<any> {
+    return this.httpclient.delete(this.APISERVER);
+  }
+  
 }

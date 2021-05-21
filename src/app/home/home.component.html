@@ -1,12 +1,17 @@
-<button routerLink = '/product'>Add projects</button><br>
+<button routerLink = '/product' style="width: 80px; height: 50px; color: blanchedalmond;">Add projects</button><br>
 
 <h1>Projects</h1>
 
-<table>
+<table class="main-app">
     <th>Id</th>
     <th>Projectname</th>
     <tr *ngFor = "let product of  products">
         <td>{{product.id}}</td>
         <td>{{product.projectname}}</td>
+        <button (click) = "deletedata(product.id)">delete</button>
+        
+        
+
     </tr>
+
 </table>

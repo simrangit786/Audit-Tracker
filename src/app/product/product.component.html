@@ -1,8 +1,27 @@
-<a routerLink = "/">back</a>
+<button routerLink = "/" style="width: 80px; height: 30px; color: blanchedalmond; background-color: black;">back</button>
 
-<h1>Add new product</h1>
+<h1>Add new project</h1>
 
-<form id="formNewProduct" name="formNewProduct" #productData = "ngForm" (ngSubmit) = "addNewProduct(productData.value)">
-    <label>projectName:</label><input type="text" name="name" id="name" placeholder="name">
-    <input type="submit" value="AddProduct">
-</form>
+<div style="width: 400px; margin: auto;">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="title">PROJECT NAME :</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            required
+            [(ngModel)]="Data.projectname"
+            name="name"
+          />
+        </div>
+        <button (click)="saveData()" class="btn btn-success" style="width: 80px; height: 30px; background-color: black; color: blanchedalmond;">Submit</button>
+    </div>
+
+    <div *ngIf="submitted">
+        <h4>You submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newdata()" style="color: blanchedalmond; background-color: black; width: 80px; height: 30px;">Add</button>
+      </div>
+    </div>
+  </div>

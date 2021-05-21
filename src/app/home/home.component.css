@@ -1,5 +1,4 @@
-table,
-td {
+table {
   border: 1px solid black;
   font-size: 20px;
   padding: 5px;
@@ -7,4 +6,19 @@ td {
 button {
   background-color: black;
   color: white;
+  height: 30px;
+  width: 80px;
+}
+td {
+  border: 1px solid black;
+}
+.main-app {
+  margin-bottom: 100px;
+  margin-right: 400px;
+}
+tr {
+  border: 1px solid black;
+}
+th {
+  border: 1px solid black;
 }

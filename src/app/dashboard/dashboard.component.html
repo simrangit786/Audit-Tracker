@@ -1,7 +1,7 @@
 <p>
-    <mat-toolbar>
+    <mat-toolbar class="style-app">
      
-    <span>Time Tracker</span>
+    <span class="edit-app">Time Tracker</span>
     <span class="example-spacer"></span>
     <div class="date-app">  
     {{myDate | date}}
@@ -17,7 +17,7 @@
 
   </mat-toolbar>
   <mat-grid-list cols="2" rowHeight="2:1" class="grid-app"> 
-    <mat-grid-tile class="grid-app">1</mat-grid-tile>
+    <mat-grid-tile class="grid-app"><router-outlet></router-outlet></mat-grid-tile>
     <mat-grid-tile class="grid-app">
         <div class="example-events">
             <div *ngFor="let e of events">{{e}}</div>
@@ -25,6 +25,7 @@
     
     </mat-grid-tile>
     <mat-grid-tile class="grid-app">
+      
     </mat-grid-tile>
     <mat-grid-tile class="grid-app">4</mat-grid-tile>
   </mat-grid-list>

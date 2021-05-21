@@ -18,7 +18,9 @@ import { ProductComponent } from './product/product.component';
     AppComponent,
     DashboardComponent,
     HomeComponent,
-    ProductComponent, 
+    ProductComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { ProductComponent } from './product/product.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       {path : "",component:HomeComponent},
-      {path : "product" ,component:ProductComponent}
+      {path : "product" ,component:ProductComponent},
+      
     ])
   ],
   providers: [],
