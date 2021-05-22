@@ -36,4 +36,7 @@ export class DataService {
     return this.httpclient.delete(this.APISERVER);
   }
   
+  update(id, data): Observable<any> {
+    return this.httpclient.put(`${this.APISERVER}/${id}`, data);
+  }
 }

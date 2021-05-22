@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductComponent } from './product/product.component';
+import { TimerComponent } from './timer/timer.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { ProductComponent } from './product/product.component';
     DashboardComponent,
     HomeComponent,
     ProductComponent,
-    
+    TimerComponent,
+
     
   ],
   imports: [
@@ -33,6 +36,7 @@ import { ProductComponent } from './product/product.component';
     RouterModule.forRoot([
       {path : "",component:HomeComponent},
       {path : "product" ,component:ProductComponent},
+      {path : "update/:id" , component:HomeComponent}
       
     ])
   ],

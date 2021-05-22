@@ -1,17 +1,26 @@
-<button routerLink = '/product' style="width: 80px; height: 50px; color: blanchedalmond;">Add projects</button><br>
+<div>
+<button routerLink = '/product' style="width: 160px; height: 50px; color: blanchedalmond; margin-bottom: 40px; font-weight: bold;">Add projects</button><br>
 
-<h1>Projects</h1>
+<h1>All Projects</h1>
+
 
 <table class="main-app">
-    <th>Id</th>
-    <th>Projectname</th>
+    <!-- <th>Id</th> -->
+    <th>Projectsname</th>
     <tr *ngFor = "let product of  products">
-        <td>{{product.id}}</td>
+        <!-- <td>{{product.id}}</td> -->
         <td>{{product.projectname}}</td>
-        <button (click) = "deletedata(product.id)">delete</button>
-        
-        
+         <td><button (click) = "deletedata(product.id)">delete</button> </td>
+         <td><button [routerLink] = "['/update',product.id]">update</button></td>
+         <td><app-timer></app-timer></td>
 
     </tr>
 
 </table>
+</div>
+
+
+
+
+
+

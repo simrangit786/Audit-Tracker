@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Inject } from '@angular/core';
 import { DataService } from '../data.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   products = [];
 
   constructor(private dataService : DataService) { }
- 
+
     
 
   ngOnInit() {
@@ -33,16 +33,23 @@ export class HomeComponent implements OnInit {
     
     }
     deletedata(id):void{
+      if(confirm("are you sure?")){
       this.dataService.delete(id).subscribe(data =>{
         console.log(data);
       })
-  
+    }
 
   }
 
-  
-  
-  
+  update(id,data):void{
+    this.dataService.update(id,data).subscribe(response =>{
+      console.log(response);
+    })
   }
+}
+
+  
+  
+  
 
 
